@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Configuraciones\**" />
+    <Compile Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="Configuraciones\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <None Remove="Configuraciones\**" />
+    <None Remove="NewFolder1\**" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Minedu.Fw.General.Models.Security" Version="0.0.0.10" />
+		<PackageReference Include="Minedu.Fw.General.Request" Version="0.0.0.3" />
+		<PackageReference Include="Minedu.Fw.General.Response" Version="0.0.0.3" />
+	</ItemGroup>
+</Project>

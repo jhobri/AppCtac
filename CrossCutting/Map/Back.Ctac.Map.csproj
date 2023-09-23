@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="InstitucionEducativa\**" />
+    <Compile Remove="PeriodoPromocional\**" />
+    <EmbeddedResource Remove="InstitucionEducativa\**" />
+    <EmbeddedResource Remove="PeriodoPromocional\**" />
+    <None Remove="InstitucionEducativa\**" />
+    <None Remove="PeriodoPromocional\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Command\Back.Ctac.Command.csproj" />
+    <ProjectReference Include="..\..\Domain\Domain\Back.Ctac.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Query\Back.Ctac.Query.csproj" />
+    <ProjectReference Include="..\Dto\Back.Ctac.Dto.csproj" />
+  </ItemGroup>
+
+</Project>

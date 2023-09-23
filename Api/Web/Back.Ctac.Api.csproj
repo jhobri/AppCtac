@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>39caf030-b88c-447a-b257-95af3f38d8ab</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702,1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702,1591</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Validator\Procesamiento\**" />
+    <Content Remove="Validator\Procesamiento\**" />
+    <EmbeddedResource Remove="Validator\Procesamiento\**" />
+    <None Remove="Validator\Procesamiento\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="appsettings.Development.json" />
+    <Content Remove="appsettings.json" />
+  </ItemGroup> 
+  
+ 
+      
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.2.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Dapr.AspNetCore" Version="1.8.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.5" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.94.2" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.4.0" />
+    <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="5.5.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+    <PackageReference Include="Microsoft.IO.RecyclableMemoryStream" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.15.0" />
+    <PackageReference Include="Minedu.Fw.Api.Infrastructure" Version="0.0.0.4" />
+    <PackageReference Include="Minedu.Fw.General.Common" Version="0.0.0.1" />
+    <PackageReference Include="Minedu.Fw.General.Request" Version="0.0.0.3" />
+    <PackageReference Include="Minedu.Fw.General.Request.Header" Version="0.0.0.25" />
+    <PackageReference Include="Minedu.Fw.General.Response" Version="0.0.0.3" />
+    <PackageReference Include="Minedu.Fw.Security.Jwt" Version="0.0.0.31" />
+    <PackageReference Include="Serilog.AspNetCore" Version="5.0.0" />
+    <PackageReference Include="Serilog.Sinks.Http" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Seq" Version="5.1.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="6.3.0" />
+  </ItemGroup>
+ 
+  
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Application\Back.Ctac.Application.csproj" />
+    <ProjectReference Include="..\..\CrossCutting\Map\Back.Ctac.Map.csproj" />
+    <ProjectReference Include="..\..\Domain\Command\Back.Ctac.Command.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Rest.Service\Back.Ctac.Rest.Service.csproj" />
+    <ProjectReference Include="..\..\Persistence\Sql\Back.Ctac.Data.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Include="appsettings.Development.json">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+
+
+  
+  <ItemGroup>
+    <None Update="Setup\rsa-0001-SiagieMsa-private-key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Setup\rsa-0001-SiagieMsa-public-key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>

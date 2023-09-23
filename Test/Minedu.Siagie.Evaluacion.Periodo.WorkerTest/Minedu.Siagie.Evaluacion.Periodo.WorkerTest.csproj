@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Minedu.Siagie.Evaluacion.Periodo.WorkerTest-F899DB49-F1D7-44D0-B070-1626CDE8CEA6</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Setup\rsa-0001-SiagieMsa-private-key.pem" />
+    <None Remove="Setup\rsa-0001-SiagieMsa-public-key.pem" />
+    <None Remove="Setup\rsa-0003-Central-private-key.pem" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Setup\rsa-0001-SiagieMsa-private-key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setup\rsa-0001-SiagieMsa-public-key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Setup\rsa-0003-Central-private-key.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="MassTransit" Version="8.0.6" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.6" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.17.0" />
+    <PackageReference Include="Minedu.Fw.General.Models.Configurations" Version="0.0.0.29" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Query\Minedu.Siagie.Evaluacion.Periodo.Query.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+</Project>

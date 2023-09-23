@@ -1,0 +1,42 @@
+{
+  "instituciones": [
+    //{
+    //  "codigoModular": "0233056",
+    //  "anexo": "0",
+    //  "anio": 2022,
+    //  "periodo": "B1"
+    //}
+    //,
+    //{
+    //  "codigoModular": "0421941",
+    //  "anexo": "0",
+    //  "anio": 2022,
+    //  "periodo": "B4",
+    //  "PeriodoPromocionalAlias": "A"
+    //}
+    //,
+    {
+      "codigoModular": "0334698",
+      "anexo": "0",
+      "anio": 2022,
+      "PeriodoPromocionalAlias": "A",
+      "PeriodoEvaluacionAlias": 1
+    },
+    {
+      "codigoModular": "0421941",
+      "anexo": "0",
+      "anio": 2022,
+      "PeriodoEvaluacionAlias": 1
+    }
+  ]
+}
+//PeriodoEvaluacionAlias
+//-> 1: es convertido. segun la configuracion de la ie a -> B1,T1,S1...
+//-> 2: es convertido. segun la configuracion de la ie a -> B2,T2,S2...
+//-> 3: es convertido. segun la configuracion de la ie a -> B3,T3...
+//-> 4: es convertido. segun la configuracion de la ie a -> B4...
+
+//PeriodoPromocionalAlias
+//-> A: es convertido. segun la configuracion de la ie a ->ANUAL, 
+//-> S1: es convertido. segun la configuracion de la ie a -> semestral 1, 
+//-> S2: es convertido. segun la configuracion de la ie a -> semestral 2

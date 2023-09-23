@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="Minedu.Fw.General.Shared.Constants" Version="0.0.0.8" />
+    <PackageReference Include="Minedu.Fw.NetConnect.ISQL" Version="0.0.0.2" />
+   <PackageReference Include="Minedu.Fw.Domain.SeedWork" Version="0.0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Application\Contract\Back.Ctac.IApplication.csproj" />
+    <ProjectReference Include="..\..\CrossCutting\Help\Back.Ctac.Transversal.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Rest.Service\Back.Ctac.Rest.Service.csproj" />    
+    <ProjectReference Include="..\Domain\Back.Ctac.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Provider\" />
+  </ItemGroup>
+
+</Project>

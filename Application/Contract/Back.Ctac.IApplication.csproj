@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CrossCutting\Dto\Back.Ctac.Dto.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Rest.Service.Proxy\Back.Ctac.Rest.Service.Proxy.csproj" />
+  </ItemGroup>
+
+</Project>

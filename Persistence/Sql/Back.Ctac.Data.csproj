@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Minedu.Fw.NetConnect.SQL" Version="0.0.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Domain\Command\Back.Ctac.Command.csproj" />
+    <ProjectReference Include="..\..\Domain\Query\Back.Ctac.Query.csproj" />
+  </ItemGroup>
+
+</Project>

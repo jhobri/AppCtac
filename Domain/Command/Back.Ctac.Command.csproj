@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Procesamiento\**" />
+    <EmbeddedResource Remove="Procesamiento\**" />
+    <None Remove="Procesamiento\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="AutoMapper" Version="11.0.1" />
+	  <PackageReference Include="MassTransit" Version="8.0.5" />
+	  <PackageReference Include="MediatR" Version="10.0.1" />
+    <PackageReference Include="ClosedXML" Version="0.94.2" />
+	  <PackageReference Include="Minedu.Fw.General.Extension" Version="0.0.0.1" />
+	  <PackageReference Include="Minedu.Fw.General.Models.Configurations" Version="0.0.0.41" />
+	  <PackageReference Include="Minedu.Fw.General.Response" Version="0.0.0.3" />
+	  <PackageReference Include="Minedu.Fw.General.Shared.Constants" Version="0.0.0.8" />
+	  <PackageReference Include="Minedu.Fw.NetConnect.ISQL" Version="0.0.0.2" />
+    <PackageReference Include="Minedu.Fw.Domain.SeedWork" Version="0.0.0.1" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Minedu.Siagie.Events" Version="0.0.1.17" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infraestructure\Rest.Service.Proxy\Back.Ctac.Rest.Service.Proxy.csproj" />
+    <ProjectReference Include="..\..\Infraestructure\Rest.Service\Back.Ctac.Rest.Service.csproj" />
+    <ProjectReference Include="..\Query\Back.Ctac.Query.csproj" />
+  </ItemGroup>
+
+</Project>
