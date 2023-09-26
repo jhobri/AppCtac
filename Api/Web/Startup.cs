@@ -180,7 +180,7 @@ public class Startup
                     options.RoutePrefix = $"{swaggerBasePath}";
                     options.InjectStylesheet($"/swagger-ui/custom.css");
                     options.InjectJavascript($"/swagger-ui/custom.js", "text/javascript");
-                    options.DocumentTitle = "Evaluación API ::SIAGIE::";
+                    options.DocumentTitle = "Ministerio API ::Piloto::";
                 }
             });
 

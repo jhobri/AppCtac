@@ -22,7 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Provider\" />
+    <Folder Include="Provider\Publicidad\All\" />
+    <Folder Include="Provider\Publicidad\ById\" />
+    <Folder Include="Publicidad\" />
   </ItemGroup>
 
 </Project>
