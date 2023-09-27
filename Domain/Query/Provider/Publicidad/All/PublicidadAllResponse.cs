@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Back.Ctac.Query.Provider.Publicidad
+namespace Back.Ctac.Query.Provider.Publicidad.All
 {
-    public interface IQueryPublicidadRepository 
+    public class PublicidadAllResponse
     {
     }
 }
